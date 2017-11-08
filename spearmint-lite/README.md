@@ -57,6 +57,14 @@ Note that you should be able to install protocol-buffers from source without req
 
 		bin/make_protobufs
 
+	Then on Anaconda:
+
+	     	conda install protobuf
+
+	or Cython:
+
+		sudo pip install protobuf
+
 This package has been tested on Ubuntu linux (versions 11.0+) and
 Mac-OSX.
 
