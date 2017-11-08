@@ -1,3 +1,11 @@
+This is the porting of the GPLv3 repository of Spearmint to Python 3.
+
+The original repository can be found at: https://github.com/JasperSnoek/spearmint
+
+Below follows the original README.md
+
+----------------------------------------------
+
 New code repository!
 As you might have noticed, the development of this repository has been limited to maintenance and bug fixes for some time now.  The reason is that there has been a collaborative effort to overhaul Spearmint into a new codebase.  This includes both algorithmic/theoretical and engineering improvements.  Check it out at https://github.com/HIPS/Spearmint.  Note that the new repository is under a non-commercial license with a contributor license agreement.  If you prefer not to agree to the license, you can freely use code here (though it is a bit older).
 
@@ -18,11 +26,13 @@ possible.
 
 Spearmint is the result of a collaboration primarily between machine learning researchers at [Harvard University](https://hips.seas.harvard.edu/) and the [University of Toronto](http://learning.cs.toronto.edu/).
 
+**Soon you'll be able to do your optimization in the cloud with a more powerful, accessible and scalable tool.  Sign up for the private beta at www.whetlab.com**
+
 Dependencies
 ------------
 This package requires:
 
-* Python 2.7
+* Python 3
 
 * [Numpy](http://www.numpy.org/) version 1.6.1+
 On Ubuntu linux you can install this package using the command:
