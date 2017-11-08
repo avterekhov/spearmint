@@ -40,9 +40,9 @@ except ImportError: import json
 # from anywhere.
 sys.path.append(os.path.realpath(__file__))
 
-from ExperimentGrid  import *
-from helpers         import *
-from runner          import job_runner
+from .ExperimentGrid  import *
+from .helpers         import *
+from .runner          import job_runner
 
 # Use a global for the web process so we can kill it cleanly on exit
 web_proc = None
@@ -128,9 +128,9 @@ def start_web_view(options, experiment_config, chooser):
 
     from spearmint.web.app import app    
     port = get_available_port(options.web_status_port)
-    print "Using port: " + str(port)
+    print("Using port: " + str(port))
     if options.web_status_host:
-        print "Listening at: " + str(options.web_status_host)
+        print("Listening at: " + str(options.web_status_host))
     app.set_experiment_config(experiment_config)
     app.set_chooser(options.chooser_module,chooser)
     debug = (options.verbose == True)
@@ -317,14 +317,14 @@ def check_experiment_dirs(expt_dir):
 # Cleanup locks and processes on ctl-c
 def sigint_handler(signal, frame):
     if web_proc:
-        print "closing web server...",
+        print("closing web server...", end=' ')
         web_proc.terminate()
-        print "done"
+        print("done")
     sys.exit(0)
 
 
 if __name__=='__main__':
-    print "setting up signal handler..."
+    print("setting up signal handler...")
     signal.signal(signal.SIGINT, sigint_handler)
     main()
 

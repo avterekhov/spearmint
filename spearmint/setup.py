@@ -12,6 +12,9 @@ setup(name='spearmint',
       url="https://github.com/JasperSnoek/spearmint",
       version='1.0',
       license='GPLv3',
-      packages=['driver', 'chooser'],
-      py_modules=MODULES
+      packages=['spearmint', 'spearmint.driver', 'spearmint.chooser'],
+      package_dir={'spearmint': 'spearmint',
+                   'spearmint.driver': 'spearmint/driver',
+                   'spearmint.chooser': 'spearmint/chooser'},
+      #py_modules=MODULES
      )

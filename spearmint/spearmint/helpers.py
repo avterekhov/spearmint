@@ -4,7 +4,7 @@ import subprocess
 import tempfile
 
 from google.protobuf import text_format
-from spearmint_pb2   import *
+from .spearmint_pb2   import *
 
 
 def log(*args):

@@ -6,8 +6,8 @@ def main(job_id, params):
   x = params['X'][0]
   y = params['Y'][0]
   res = dejong(x, y)
-  print "De Jong's function in 2D:"
-  print "\tf(%.2f, %0.2f) = %f" % (x, y, res)
+  print("De Jong's function in 2D:")
+  print("\tf(%.2f, %0.2f) = %f" % (x, y, res))
   return dejong(x, y)
 
 
