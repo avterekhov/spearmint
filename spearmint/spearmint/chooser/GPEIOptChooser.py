@@ -85,7 +85,7 @@ class GPEIOptChooser:
         self.locker.lock_wait(self.state_pkl)
 
         # Write the hyperparameters out to a Pickle.
-        fh = tempfile.NamedTemporaryFile(mode='w', delete=False)
+        fh = tempfile.NamedTemporaryFile(mode='wb', delete=False)
         pickle.dump({ 'dims'          : self.D,
                        'ls'            : self.ls,
                        'amp2'          : self.amp2,
@@ -150,7 +150,7 @@ class GPEIOptChooser:
     # Read in the chooser from file. Returns True only on success
     def _read_only(self):
         if os.path.exists(self.state_pkl):
-            fh    = open(self.state_pkl, 'r')
+            fh    = open(self.state_pkl, 'rb')
             state = pickle.load(fh)
             fh.close()
 
@@ -170,7 +170,7 @@ class GPEIOptChooser:
 
         self.randomstate = npr.get_state()
         if os.path.exists(self.state_pkl):
-            fh    = open(self.state_pkl, 'r')
+            fh    = open(self.state_pkl, 'rb')
             state = pickle.load(fh)
             fh.close()
 
